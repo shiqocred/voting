@@ -1,0 +1,1 @@
+<button class="px-5 py-2 flex items-center justify-center text-sm text-slate-200 bg-red-600 rounded-md" wire:click='logout'>Keluar</button>
