@@ -31,7 +31,7 @@
                         </div>
                         <div class="w-full">
                             <h3>Visi:</h3>
-                            @if ($detail_visi !== null)
+                            @if ($detail_visi !== '')
                                 <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">
                                     {{ $detail_visi }}
                                 </span>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="w-full">
                             <h3>Misi:</h3>
-                            @if ($detail_misi !== null)
+                            @if ($detail_misi !== '')
                                 <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">
                                     {{ $detail_misi }}
                                 </span>
