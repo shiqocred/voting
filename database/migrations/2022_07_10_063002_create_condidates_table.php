@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('pos_id')->constrained('positions')->onDelete('cascade');
             $table->string('color');
-            $table->text('visi')->nullable();
-            $table->text('misi')->nullable();
+            $table->text('visi')->default(null);
+            $table->text('misi')->default(null);
             $table->string('image');
             $table->integer('points');
             $table->timestamps();
