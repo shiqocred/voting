@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('condidates', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('pos_id')->constrained('positions')->onDelete('cascade');
+            $table->string('keluarga');
             $table->string('color');
             $table->text('visi')->default(null);
             $table->text('misi')->default(null);

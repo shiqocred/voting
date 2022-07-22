@@ -22,7 +22,7 @@
                         <div class="w-full flex">
                             <div class="min-w-[50%] mr-2">
                                 <h3>Kewarganegaraan:</h3>
-                                <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">{{ $detail_pos_id }}</span>
+                                <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">{{ $detail_keluarga }}</span>
                             </div>
                             <div class="max-w-[50%] min-w-[25%] ml-2">
                                 <h3>Warna:</h3>
@@ -155,7 +155,7 @@
                                     {{ $condidate->name }}
                                 </td> 
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">
-                                    {{ $condidate->positions->positions }}
+                                    {{ $condidate->keluarga }}
                                 </td> 
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">
                                     {{ $condidate->created_at->diffForHumans() }}
@@ -220,7 +220,7 @@
                                 <div class="flex w-full flex-col ">
                                     <span class="font-semibold">Kewarganegaraan: </span>
                                     <span class="w-full py-1 px-3 rounded-sm capitalize bg-slate-100 text-slate-700">
-                                        {{ $condidate->positions->positions }}
+                                        {{ $condidate->keluarga }}
                                     </span>
                                 </div>
                                 <div class="flex w-full flex-col">
@@ -293,13 +293,13 @@
                 </label>
                 <label class="block w-full mt-5">
                     <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Kewarganegaraan</span>
-                    <select wire:model.lazy='pos_id' class="mt-1 px-3 appearance-none py-2 w-full md:w-3/5 lg:w-2/5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-non" >
-                    <option selected>Pilih Kewarganegaraan</option>
-                        @foreach ($positions as $position)
-                            <option value="{{ $position->id }}">{{ $position->positions }}</option>
-                        @endforeach
-                    </select>
-                    @error('pos_id')
+                    <input 
+                        type="text" 
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
+                        placeholder="kekeluargaan"
+                        wire:model.lazy='keluarga'  
+                    />
+                    @error('keluarga')
                         <span class="text-red-600 text-sm before:content-['*']">{{ $message }}</span>
                     @enderror
                 </label>
@@ -384,14 +384,14 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Positions</span>
-                    <select wire:model.lazy='edit_pos_id' class="mt-1 px-3 appearance-none py-2 w-full md:w-3/5 lg:w-2/5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-non" >
-                    <option selected>Select the position</option>
-                        @foreach ($positions as $position)
-                            <option value="{{ $position->id }}">{{ $position->positions }}</option>
-                        @endforeach
-                    </select>
-                    @error('edit_pos_id')
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Kekeluargaan</span>
+                    <textarea 
+                        type="text" 
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
+                        placeholder="Kekeluargaan"
+                        wire:model.lazy='edit_keluarga'  
+                    ></textarea>
+                    @error('edit_keluarga')
                         <span class="text-red-600 text-sm before:content-['*']">{{ $message }}</span>
                     @enderror
                 </label>

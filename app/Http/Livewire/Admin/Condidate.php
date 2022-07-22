@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Condidate as ModelsCondidate;
-use App\Models\Position;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -19,14 +18,14 @@ class Condidate extends Component
     public $detail_visi;
     public $detail_misi;
     public $detail_color;
-    public $detail_pos_id;
+    public $detail_keluarga;
     public $detail_image;
     public $total;
     public $name;
     public $visi;
     public $misi;
     public $color;
-    public $pos_id;
+    public $keluarga;
     public $image;
 
     public $condidate_id;
@@ -34,7 +33,7 @@ class Condidate extends Component
     public $edit_visi;
     public $edit_misi;
     public $edit_color;
-    public $edit_pos_id;
+    public $edit_keluarga;
     public $old_image;
     public $new_image;
 
@@ -43,13 +42,11 @@ class Condidate extends Component
     public function render()
     {
         if ($this->search != "") {
-            $this->positions = Position::all();
             $this->total=ModelsCondidate::where('name', 'LIKE', '%' . $this->search . '%')->count();
             $condidates=ModelsCondidate::orderBy('id', 'DESC')->where('name', 'LIKE', '%' . $this->search . '%')->get();
             return view('livewire.admin.condidate', compact('condidates'))->layout('layout.admin-app');
         }
         $this->total = ModelsCondidate::count();
-        $this->positions = Position::all();
         $condidates=ModelsCondidate::orderBy('id', 'DESC')->get();
         return view('livewire.admin.condidate', compact('condidates'))->layout('layout.admin-app');
     }
@@ -72,8 +69,7 @@ class Condidate extends Component
     {
         $this->name = '';
         $this->color = '#000';
-        $this->pos_id = '';
-        $this->positions = '';
+        $this->keluarga = '';
         $this->image="";
         $this->visi="";
         $this->misi="";
@@ -83,7 +79,7 @@ class Condidate extends Component
         $this->condidate_id="";
         $this->edit_name="";
         $this->edit_color="#000";
-        $this->edit_pos_id="";
+        $this->edit_keluarga="";
         $this->old_image="";
         $this->new_image="";
     }
@@ -95,7 +91,7 @@ class Condidate extends Component
         $this->validate([
             'name' => ['required', 'string'],
             'color' => ['required', 'string'],
-            'pos_id' => ['required', 'string'],
+            'keluarga' => ['required', 'string'],
         ]);
 
         $filename = "";
@@ -106,7 +102,7 @@ class Condidate extends Component
         }
         $condidates->name = $this->name;
         $condidates->color = $this->color;
-        $condidates->pos_id = $this->pos_id;
+        $condidates->keluarga = $this->keluarga;
         $condidates->visi = $this->visi;
         $condidates->misi = $this->misi;
         $condidates->image = $filename;
@@ -132,7 +128,7 @@ class Condidate extends Component
         $this->condidate_id=$condidate->id;
         $this->edit_name=$condidate->name;
         $this->edit_color=$condidate->color;
-        $this->edit_pos_id=$condidate->pos_id;
+        $this->edit_keluarga=$condidate->keluarga;
         $this->edit_visi=$condidate->visi;
         $this->edit_misi=$condidate->misi;
         $this->old_image=$condidate->image;
@@ -144,7 +140,7 @@ class Condidate extends Component
         $this->validate([
             'edit_name' => ['required', 'string'],
             'edit_color' => ['required', 'string'],
-            'edit_pos_id' => ['required'],
+            'edit_keluarga' => ['required'],
         ]);
 
         $filename = "";
@@ -159,7 +155,7 @@ class Condidate extends Component
         }
         $condidates->name = $this->edit_name;
         $condidates->color = $this->edit_color;
-        $condidates->pos_id = $this->edit_pos_id;
+        $condidates->keluarga = $this->edit_keluarga;
         $condidates->visi = $this->edit_visi;
         $condidates->misi = $this->edit_misi;
         $condidates->image = $filename;
@@ -199,7 +195,7 @@ class Condidate extends Component
         $this->detail_visi= $condidate->visi;
         $this->detail_misi= $condidate->misi;
         $this->detail_color= $condidate->color;
-        $this->detail_pos_id= $condidate->positions->positions;
+        $this->detail_keluarga= $condidate->keluarga;
         $this->detail_image= $condidate->image;
     }
 

@@ -26,7 +26,7 @@
                           <div class="w-full flex">
                               <div class="w-1/2 mr-2">
                                   <h3>Kewarganegaraan:</h3>
-                                  <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">{{ $detail_pos_id }}</span>
+                                  <span class="w-full rounded-md block py-2 px-5 bg-slate-300 ">{{ $detail_keluarga }}</span>
                               </div>
                               <div class="w-1/2 ml-2">
                                   <h3>Warna:</h3>

@@ -16,7 +16,7 @@ class Home extends Component
     public $detail_visi;
     public $detail_misi;
     public $detail_color;
-    public $detail_pos_id;
+    public $detail_keluarga;
     public $detail_image;
     public $candidates;
     public function render()
@@ -56,7 +56,7 @@ class Home extends Component
         $this->detail_visi= $condidate->visi;
         $this->detail_misi= $condidate->misi;
         $this->detail_color= $condidate->color;
-        $this->detail_pos_id= $condidate->positions->positions;
+        $this->detail_keluarga= $condidate->keluarga;
         $this->detail_image= $condidate->image;
     }
 

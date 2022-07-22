@@ -21,7 +21,6 @@
         </div>
         <div class="absolute left-0 px-5 top-14 h-10 items-center backdrop-blur-md bg-slate-600/80 lg:bg-transparent lg:relative lg:top-0 lg:w-auto lg:h-full snap-x scroll-smooth lg:backdrop-blur-0 w-screen sm:justify-center overflow-scroll flex space-x-5">
             <a href="{{ route('admin.dashboard') }}" class="scroll-ml-6 snap-start px-1 h-8 text-sm lg:text-slate-600/90 font-medium text-white focus:border lg:hover:text-slate-700 rounded-sm grid place-items-center">Dashboard</a>
-            <a href="{{ route('admin.positions') }}" class="scroll-ml-6 snap-start px-1 h-8 text-sm lg:text-slate-600/90 font-medium text-white focus:border lg:hover:text-slate-700 rounded-sm grid place-items-center">Daerah</a>
             <a href="{{ route('admin.condidates') }}" class="scroll-ml-6 snap-start px-1 h-8 text-sm lg:text-slate-600/90 font-medium text-white focus:border lg:hover:text-slate-700 rounded-sm grid place-items-center">Kandidat</a>
             <a href="{{ route('admin.voters') }}" class="scroll-ml-6 snap-start px-1 h-8 text-sm lg:text-slate-600/90 font-medium text-white focus:border lg:hover:text-slate-700 rounded-sm grid place-items-center">Pemilih</a>
             <a href="{{ route('admin.votes') }}" class="scroll-ml-6 snap-start px-1 h-8 text-sm lg:text-slate-600/90 font-medium text-white focus:border lg:hover:text-slate-700 rounded-sm grid place-items-center">Hasil</a>

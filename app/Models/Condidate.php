@@ -17,9 +17,4 @@ class Condidate extends Model
         'pos_id',
         'image'
     ];
-
-    public function positions()
-    {
-        return $this->belongsTo(Position::class, 'pos_id');
-    }
 }
