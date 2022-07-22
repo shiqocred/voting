@@ -5,7 +5,6 @@ use App\Http\Livewire\Admin\Condidate;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Admin\GetCandidateVotes;
 use App\Http\Livewire\Admin\Login as AdminLogin;
-use App\Http\Livewire\Admin\Position;
 use App\Http\Livewire\Admin\Setting;
 use App\Http\Livewire\Admin\Voter;
 use App\Http\Livewire\Frontend\Home;
@@ -44,7 +43,6 @@ Route::middleware(['guest:admin'])->group(function (){
 Route::middleware(['auth:admin'])->group(function (){
     Route::prefix('/admin')->group(function () {
         Route::get('/dashboard', Dashboard::class)->name('admin.dashboard');
-        Route::get('/positions', Position::class)->name('admin.positions');
         Route::get('/condidates', Condidate::class)->name('admin.condidates');
         Route::get('/voters', Voter::class)->name('admin.voters');
         Route::get('/setting', Setting::class)->name('admin.setting');
