@@ -1,10 +1,10 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400">
     <x-slot name='title'>
-        Voter
+        Pemilih
     </x-slot>
     <div class="flex w-screen justify-center pt-[130px] lg:pt-12 items-center">
         <div class="w-11/12 h-14 rounded-md flex px-5 md:px-10 md:w-4/5 lg:my-10 mb-5 items-center justify-between bg-slate-300">
-            <h3 class="sm:text-xl text-md font-medium sm:font-semibold uppercase">{{ __('Voters ') }} : {{ $total }}</h3>
+            <h3 class="sm:text-xl text-md font-medium sm:font-semibold uppercase">{{ __('Pemilih ') }} : {{ $total }}</h3>
             <form wire:submit.prevent='create'>
                 <button class="bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring focus:ring-sky-300 active:bg-sky-700 text-sm sm:h-10 sm:w-20 py-1.5 px-3 rounded-md font-semibold text-white">New</button>
             </form>
@@ -60,13 +60,13 @@
                         Password
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-slate-900">
-                        Votes
+                        Sisa Pilih
                     </th>
                     <th scope="col" class="px-6 py-3 min-w-[100px] text-left text-sm font-medium text-slate-900">
-                        Voted 1
+                        Pilihan 1
                     </th>
                     <th scope="col" class="px-6 py-3 min-w-[100px] text-left text-sm font-medium text-slate-900">
-                        Voted 2
+                        Pilihan 2
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-slate-900">
                         Action
@@ -152,28 +152,28 @@
                             @if (count($voter->votes)>1)
                                 @foreach ($voter->votes as $item)
                                     <div class="flex flex-col items-start justify-center w-5/12 whitespace-nowrap text-sm font-medium text-slate-100">
-                                        <span class="text-slate-100">Vote {{ $loop->iteration }}</span>
+                                        <span class="text-slate-100">Pilihan {{ $loop->iteration }}</span>
                                         <h3 class="py-2 w-full flex justify-center bg-slate-100/30">{{ $item->created_at->diffForHumans() }}</h3>
                                     </div>
                                 @endforeach
                             @elseif (count($voter->votes)>0)
                                 @foreach ($voter->votes as $item)
                                     <div class="flex flex-col items-start justify-center w-5/12 whitespace-nowrap text-sm font-medium text-slate-100">
-                                        <span class="text-slate-100">Vote 1</span>
+                                        <span class="text-slate-100">Pilihan 1</span>
                                         <h3 class="py-2 w-full flex justify-center bg-slate-100/30">{{ $item->created_at->diffForHumans() }}</h3>
                                     </div>
                                 @endforeach
                                 <div class="flex flex-col items-start justify-center w-5/12 whitespace-nowrap text-sm font-medium text-slate-100">
-                                    <span class="text-slate-100">Vote 2</span>
+                                    <span class="text-slate-100">Pilihan 2</span>
                                     <h3 class="py-2 w-full flex justify-center bg-slate-100/30">Null</h3>
                                 </div>
                             @else
                                 <div class="flex flex-col items-start justify-center w-5/12 whitespace-nowrap text-sm font-medium text-slate-100">
-                                    <span class="text-slate-100">Vote 1</span>
+                                    <span class="text-slate-100">Pilihan 1</span>
                                     <h3 class="py-2 w-full flex justify-center bg-slate-100/30">Null</h3>
                                 </div>
                                 <div class="flex flex-col items-start justify-center w-5/12 whitespace-nowrap text-sm font-medium text-slate-100">
-                                    <span class="text-slate-100">Vote 2</span>
+                                    <span class="text-slate-100">Pilihan 2</span>
                                     <h3 class="py-2 w-full flex justify-center bg-slate-100/30">Null</h3>
                                 </div>
                             @endif
