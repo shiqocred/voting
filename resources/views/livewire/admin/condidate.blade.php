@@ -268,7 +268,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Visi</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Visi</span>
                     <textarea 
                         type="text" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
@@ -280,7 +280,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Misi</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Misi</span>
                     <textarea 
                         type="text" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
@@ -316,7 +316,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Image</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Image</span>
                     <input 
                         type="file" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100 file:cursor-pointer"  
@@ -360,7 +360,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Visi</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Visi</span>
                     <textarea 
                         type="text" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
@@ -372,7 +372,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Misi</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Misi</span>
                     <textarea 
                         type="text" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"
@@ -409,7 +409,7 @@
                     @enderror
                 </label>
                 <label class="block w-full mt-5">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 block text-sm font-medium text-white">Image</span>
+                    <span class="mb-2 block text-sm font-medium text-white">Image</span>
                     <input 
                         type="file" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100 file:cursor-pointer"  
