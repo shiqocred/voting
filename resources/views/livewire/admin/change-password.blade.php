@@ -1,6 +1,6 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400">
     <x-slot name='title'>
-        Change Password
+        Ganti Password
     </x-slot>
     <div class="w-screen pt-[130px] px-5 pb-[50px] flex justify-center items-center">
         <div class="w-full sm:w-3/5 lg:w-1/3 h-[500px] bg-slate-300 relative rounded-md flex flex-col items-center justify-center space-y-5">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             @endif
-            <h3 class="text-2xl font-bold">Reset Password</h3>
+            <h3 class="text-2xl font-bold">Ganti Password</h3>
             <form wire:submit.prevent='changePassword' class="w-10/12 md:w-3/4 flex flex-col justify-center">
                 <label class="block">
                     <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Username</span>
@@ -39,7 +39,7 @@
                     @enderror
                 </label>
                 <button type="submit" class="bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring focus:ring-sky-300 active:bg-sky-700 px-5 py-2 mt-10 text-sm leading-5 rounded-md font-semibold text-white">
-                    Perbarui Password
+                    Ganti Password
                 </button>
             </form>
         </div>

@@ -1,6 +1,6 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400 relative">
     <x-slot name='title'>
-        Condidates
+        Kandidat
     </x-slot>
     @if ($showDetails == true)
     <div class="w-screen h-screen fixed z-30 flex justify-center items-center bg-slate-700/30 backdrop-blur-md">

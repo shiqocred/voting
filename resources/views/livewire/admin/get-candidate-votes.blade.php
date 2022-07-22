@@ -1,6 +1,6 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400">
     <x-slot name='title'>
-        Login
+        Hasil
     </x-slot>
     <div class="w-screen py-32 lg:px-40 sm:px-10 px-5 ">
         <div class="w-full flex flex-wrap lg:justify-start justify-between">
