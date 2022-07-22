@@ -1,1 +1,0 @@
-<button class="sm:px-5 py-1 px-3 sm:py-2 flex items-center justify-center text-sm text-slate-200 bg-red-600 md:rounded-sm sm:rounded-md" wire:click='logout'>Keluar</button>
