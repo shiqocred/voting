@@ -1,6 +1,6 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400">
     <x-slot name='title'>
-        Position
+        Daerah
     </x-slot>
     <div class="flex w-screen justify-center pt-[130px] lg:pt-12 items-center">
         <div class="w-11/12 h-14 rounded-md flex px-5 md:px-10 md:w-4/5 lg:my-10 mb-5 items-center justify-between bg-slate-300">
@@ -135,7 +135,7 @@
                     <input 
                         type="text" 
                         class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"  
-                        placeholder="Positions"
+                        placeholder="Kewarganegaraan"
                         wire:model.lazy='positions'  
                         autofocus
                     />
@@ -163,7 +163,7 @@
                 <input 
                     type="text" 
                     class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full md:w-3/5 lg:w-2/5 rounded-md sm:text-sm focus:ring-1"  
-                    placeholder="Positions"
+                    placeholder="Kewarganegaraan"
                     wire:model.lazy="edit_position"  
                     autofocus
                 />

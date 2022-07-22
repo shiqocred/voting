@@ -1,6 +1,6 @@
 <div class="bg-[url('../img/hero-60.png')] min-h-screen bg-slate-400">
     <x-slot name='title'>
-        Setting
+        Pengaturan
     </x-slot>
     <div class="w-screen  flex justify-center pt-[130px] px-5 pb-[50px] md:px-0">
         <div class="w-full sm:w-3/5 lg:w-1/3 h-[730px] bg-slate-300 relative  rounded-md flex flex-col items-center justify-center space-y-5">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             @endif
-            <h3 class="text-2xl font-bold">SETTING</h3>
+            <h3 class="text-2xl font-bold">Pengaturan</h3>
             <form wire:submit.prevent='updateSetting({{ $setting_id }})' class="w-10/12 md:w-3/4 flex flex-col justify-center">
                 <label class="block mt-3">
                     <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Election Name</span>
