@@ -2,13 +2,6 @@
     <x-slot name='title'>
         Dashboard
     </x-slot>
-    <div class="w-screen flex flex-col xl:flex-wrap xl:flex-row items-center justify-center pt-[130px] pb-10">
-      <div class="w-full md:w-4/12 md:m-5 my-1.5 sm:my-2  flex justify-center">
-        <div class="w-11/12 bg-slate-100 flex justify-between px-10 py-2  sm:py-3 rounded-md">
-          <h4 class="text-md sm:text-xl font-semibold sm:font-bold">Total Posisi</h4>
-          <span>{{ $totalPositions }}</span>
-        </div>
-      </div>
       <div class="w-full md:w-4/12 md:m-5 my-1.5 sm:my-2 flex justify-center">
         <div class="w-11/12 bg-slate-100 flex justify-between px-10 py-2  sm:py-3 rounded-md">
           <h4 class="text-md sm:text-xl font-semibold sm:font-bold">Total Pemilih</h4>

@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Condidate;
-use App\Models\Position;
 use App\Models\User;
 use App\Models\Votes;
 use Livewire\Component;
@@ -11,7 +10,6 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     public $totalCandidates;
-    public $totalPositions;
     public $totalVoter;
     public $totalVotes;
 
@@ -20,7 +18,6 @@ class Dashboard extends Component
     public function render()
     {
         $this->totalCandidates = Condidate::count();
-        $this->totalPositions = Position::count();
         $this->totalVoter = User::count();
         $this->totalVotes = Votes::count();
         $this->isVotedUser = User::where('voted', 2)->orWhere('voted', 1)->orderBy('Id', 'DESC')->get();
